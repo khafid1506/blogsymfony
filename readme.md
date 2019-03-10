@@ -5,7 +5,7 @@
 # Set-up de mon environnement Symfony 4
 ======
 
-$ composer create-project symfony/skeleton:4.0.5 <nom_projet>
+$ composer create-project symfony/skeleton <nom_projet>
 
 $ cd <nom_projet>
 
@@ -41,32 +41,31 @@ $ php bin/console make:entity (puis nommer Nom)
 
 $ composer require --dev doctrine/doctrine-fixtures-bundle
 
-(fichier AppFixtures.php créé dans src/Entity/AppFixtures.php)
+...(fichier AppFixtures.php créé dans src/Entity/AppFixtures.php)
 
 php bin/console doctrine:fixtures:load
-
-
-
 
 
 
 # Git workflow Gitkraken possible pour votre projet
 ======
 
-## Cleaner le code avec la commande suivante (à lancer une 2ème fois si F apparaît dans le résultat) :
+## Cleaner le code pour le rendre à la norme PSR 
+
+...(à lancer une 2ème fois si F apparaît dans le résultat) :
 
 $ ./vendor/bin/php-cs-fixer fix --using-cache=no --verbose --diff --rules=@Symfony src 
 
-Remarque : Après le php-cs-fixer, vous risquez de voir des fichiers sur lesquels vous n'avez pas travaillé, dans 
+...Remarque : Après le php-cs-fixer, vous risquez de voir des fichiers sur lesquels vous n'avez pas travaillé, dans 
 la zone "stage" (avant git add -A) 
 
 1. Stage "all changes" > Titre du commit > Commit
 
 2. Pull
 
-Remarque "flèches" : 
-  Si flèche vers le bas sur <ma_branche> -> faire un pull
-  Si flèche vers le haut sur <ma_branche> -> faire un push
+...Remarque "flèches" : 
+...Si flèche vers le bas sur <ma_branche> -> faire un pull
+...Si flèche vers le haut sur <ma_branche> -> faire un push
 
 3. push vers <ma_branche> (je suis sur <ma_branche>)
 
@@ -78,13 +77,13 @@ Remarque "flèches" :
 
 7. Clique droit sur <dev> > "Rebase <ma_branche> onto dev"
 
-.. Attention : après l'étape 7), 2 flèches "haut" et "bas" apparaissent à côté de <ma_branche>
+...Attention : après l'étape 7), 2 flèches "haut" et "bas" apparaissent à côté de <ma_branche>
 
 7bis. Pull (note : pull de <ma_branche> qui a la flèche vers le bas)
 
 7ter. Push (note : push de <ma_branche> qui a la flèche vers le haut)
 
-.. Si erreur sur le rebase : cliquer en haut du diagramme central sur "Work in progress" (WP) puis sur "skip commit" 
+...Si erreur sur le rebase : cliquer en haut du diagramme central sur "Work in progress" (WP) puis sur "skip commit" 
 (en bas à droite)
 
 10. Clique droit <dev> > Merge <ma_branche> into dev
@@ -113,7 +112,7 @@ $ git checkout dev
 
 $ git push
 
-TODO : A compléter...
+...TODO : A compléter...
 
 
 # CREATION USER ET ADMIN MDP 1234 AVEC FOSUSERBUNDLE
@@ -153,7 +152,7 @@ $ php bin/console doctrine:fixtures:load
 # CHANGEMENT ENTITE(S) (BASE DE DONNEES)
 ======
 
-.. Modification éventuelle de src/datafixtures/app.fixture en conséquence
+...Modification éventuelle de src/datafixtures/app.fixture en conséquence
 
 $ php bin/console doctrine:fixtures:load
 
